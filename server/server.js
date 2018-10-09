@@ -18,7 +18,7 @@ app.listen('3000', ()=>{
 
 app.post('/todos',(req, response)=>{
 
-    // createTodo(req.body.text, response);
+     createTodo(req.body.text, response);
     
 });
 
@@ -40,3 +40,5 @@ var createTodo = (taskText, res)=>{
 
     });
 };
+
+module.exports = {app};
