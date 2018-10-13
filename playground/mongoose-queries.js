@@ -5,7 +5,7 @@ const {Todo} = require('../server/models/todo');
 const {User} = require('../server/models/user'); 
 
 // var _id = '5bbdbddd64574f3ac8f95600';
-var _id = '5bb95b9bd803ee23285a860c';
+// var _id = '5bb95b9bd803ee23285a860c';
 
 // if(!ObjectID.isValid(_id)){
 
@@ -43,14 +43,20 @@ var _id = '5bb95b9bd803ee23285a860c';
 
 // }).catch((e)=>{console.log(e)});
 
-User.findById(_id).then((user)=>{
+// User.findById(_id).then((user)=>{
 
-    if(!user){
+//     if(!user){
 
-        return console.log('No such user EXISTS');
+//         return console.log('No such user EXISTS');
 
-    }
+//     }
 
-    console.log('User Found', JSON.stringify(user));
+//     console.log('User Found', JSON.stringify(user));
 
-}, (e)=>{console.log(e)});
+// }, (e)=>{console.log(e)});
+
+findTodoById = (_id)=>{
+    return Todo.findById(_id);
+};
+
+module.exports = {findTodoById};
